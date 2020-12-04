@@ -206,18 +206,17 @@ let arr = [1742,
 
 const checkNumber = (arr) =>{
      for(let i = 0; i < arr.length; i++){
-         for(let j = 1; i < arr.length; j++){
-            number1 =  arr[i];
-            number2 = arr[j];
-            number3 = 2020 - (number1 + number2);
-            if(arr.includes(number3)){
-                console.log("it's working");
+           for(let j = 0; j < arr.length; j++){
+            number1 = arr[i];
+            number2 = arr[j];  
+            number3 = 2020 - (arr[i] + arr[j]);
+            if(number3 > 0 && arr.includes(number3)){
                 return number1 * number2 * number3;
-            } else{
-                console.log("not working");
             }
+           }
          }
      }
-}
+
 
 checkNumber(arr);
+
