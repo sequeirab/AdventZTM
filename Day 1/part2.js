@@ -199,5 +199,25 @@ let arr = [1742,
     1989,
     1327];
 
-    
-    
+    let number1;
+    let number2;
+    let number3;
+
+
+const checkNumber = (arr) =>{
+     for(let i = 0; i < arr.length; i++){
+         for(let j = 1; i < arr.length; j++){
+            number1 =  arr[i];
+            number2 = arr[j];
+            number3 = 2020 - (number1 + number2);
+            if(arr.includes(number3)){
+                console.log("it's working");
+                return number1 * number2 * number3;
+            } else{
+                console.log("not working");
+            }
+         }
+     }
+}
+
+checkNumber(arr);
