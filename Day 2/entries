@@ -1,4 +1,4 @@
-const input = `1-13 r: gqdrspndrpsrjfjx
+1-13 r: gqdrspndrpsrjfjx
 5-16 j: jjjjkjjzjjjjjfjzjjj
 14-16 r: rrrnrrrrrcnrgxrr
 1-3 k: bkktwhgktv
@@ -997,28 +997,4 @@ const input = `1-13 r: gqdrspndrpsrjfjx
 4-6 g: kggggg
 6-7 c: cccccdqcc
 2-6 x: vjkxbrfwnj
-16-18 s: kssssssswssssssssssb`
-
-
-const checkPass = (input) => {
-        return input
-        .split(/\n/)
-        .reduce((validPass, currentPass) => {
-            const pattern = /(\d?\d)\-(\d?\d)\s([a-z])\:\s([a-z]*)/gm;
-            const matchGroup = pattern.exec(currentPass);
-        
-            const lowerBound = parseInt(matchGroup[1]);
-            const upperBound = parseInt(matchGroup[2]);
-            const letter = matchGroup[3];
-            const pass = matchGroup[4].split("");
-
-            const matches = pass.filter(x => x === letter).length;
-
-            if(matches >= lowerBound && matches <= upperBound){
-                return validPass + 1;
-            } 
-            return validPass;
-    },0);
-
-}
-checkPass(input);
+16-18 s: kssssssswssssssssssb
