@@ -1013,7 +1013,7 @@ const checkPass = (input) =>  {
 
                 const positionOne = pass[firstPosition - 1] === letter;
                 const postitionTwo = pass[secondPosition - 1] === letter;
-                
+                debugger;
 
                 if((positionOne && !postitionTwo) || (!positionOne && postitionTwo) ){
                     return validPass + 1;
